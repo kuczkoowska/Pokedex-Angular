@@ -5,18 +5,18 @@ export const MENU_ITEMS: IMenuItem[] = [
         icon: null,
         caption: 'Home',
         route: '',
-        blocked: true
+        blocked: false
     },
     {
         icon: null,
         caption: 'Pokedex',
-        route: '',
+        route: '/pokedex',
         blocked: false
     },
     {
         icon: null,
         caption: 'Favorites',
-        route: '',
+        route: '/favorites',
         blocked: true
     },
 ]

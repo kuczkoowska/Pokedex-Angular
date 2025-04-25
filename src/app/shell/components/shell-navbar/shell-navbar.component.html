@@ -1,12 +1,13 @@
 <nav class="">
-    <ul
-        class="flex flex-row justify-center items-center gap-8 bg-white p-6 rounded-lg shadow-md text-gray-600 font-bold">
-        @for (item of MENU_ITEMS(); track item.caption) {
-            <li>
-                <a [routerLink]="item.route" [ngClass]="{'text-gray-300 cursor-not-allowed': item.blocked}">
-                    {{ item.caption }}
-                </a>
-            </li>
-        }
-    </ul>
+  <ul
+    class="flex flex-row justify-center items-center gap-8 bg-white p-6 rounded-lg shadow-md text-gray-600 font-bold">
+    @for (item of MENU_ITEMS(); track item.caption) {
+      <li>
+        <a routerLinkActive="text-red-700" [routerLink]="item.blocked ? undefined : item.route"
+           [ngClass]="{'text-gray-400 cursor-not-allowed': item.blocked}" [routerLinkActiveOptions]="{exact: true}">
+          {{ item.caption }}
+        </a>
+      </li>
+    }
+  </ul>
 </nav>
